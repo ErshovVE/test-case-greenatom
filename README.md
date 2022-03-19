@@ -34,7 +34,7 @@ $ python manage.py startapp review
 ## Запуск приложения
 Заходим в витруальное окружение и запускаем командами:
 ```
-$ myvenv\Scripts\activate
+$ test_case_review\venv\Scripts\activate
 $ python manage.py runserver
 ```
 
