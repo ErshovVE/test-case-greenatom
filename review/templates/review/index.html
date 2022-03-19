@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'review/css/style.css' %}">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+	</head>
+	<body>
+		<img src="https://www.tadviser.ru/images/1/1f/%D0%93%D0%A0%D0%98%D0%9D%D0%90%D0%A2%D0%9E%D0%9C_%D0%9B%D0%BE%D0%B3%D0%BE2021.png">
+		<h1>IMDB review</h1>       
+		<form action="/" method="post"> {% csrf_token %}
+			<h2>Write your review:</h2>
+			<textarea name="review" cols="100" rows="10" required="True" placeholder="Type here"></textarea>
+			<br>
+			<input type="submit" value="Go!">
+		<h2>Your review:</h2>
+		<p>{{ review_text }}</p>
+		<h2>Stars: {{ review_stars }}</h2>           
+		<h2>Positive review: {{ review_class }}</h2>
+		</form>
+	</body>
+</html>
