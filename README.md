@@ -14,7 +14,7 @@
 **/venv/** - содержит виртуальное окружение для Python. Создаеется и настраивается с помощью последовательности команд:
 ```
 $ python -m venv venv
-$ myvenv\Scripts\activate
+$ venv\Scripts\activate
 $ python -m pip install --upgrade pip
 $ pip install -r requirements.txt
 ```
