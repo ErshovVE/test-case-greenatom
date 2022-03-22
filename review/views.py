@@ -10,7 +10,7 @@ def index(request):
     review_stars = ''
     if request.method == 'POST':
         review_text = request.POST['review']
-        loaded_model = tf.keras.models.load_model('export_model')
+        loaded_model = tf.keras.models.load_model('export_model2')
         review_class = loaded_model.predict([review_text])[0][0]>=0.5
         loaded_model1 = tf.keras.models.load_model('export_model1')
         review_stars = int(loaded_model1.predict([review_text])[0][0] + (0.5))
